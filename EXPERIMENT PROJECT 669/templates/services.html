@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block title %}Services & Packages - Surf
+Instructor{% endblock %} {% block content %}
+<section class="section bg-light">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-water fa-3x"></i>
+        <h3>Beginner Lessons</h3>
+        <p>Learn the basics of paddling, popping up, and safety.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-wave-square fa-3x"></i>
+        <h3>Intermediate Coaching</h3>
+        <p>Improve your turns, speed, and wave reading.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-map-marked-alt fa-3x"></i>
+        <h3>Surf Guiding</h3>
+        <p>Discover the best local spots for your level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Learning Packages</h2>
+    <div class="packages-grid">
+      <div class="package-card">
+        <h3>Weekend Warrior</h3>
+        <div class="price">$150</div>
+        <ul>
+          <li>2 Surf Lessons</li>
+          <li>Equipment Rental Included</li>
+          <li>Photo Analysis</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline"
+          >Choose Plan</a
+        >
+      </div>
+      <div class="package-card featured">
+        <div class="badge">Popular</div>
+        <h3>5-Day Intensive</h3>
+        <div class="price">$350</div>
+        <ul>
+          <li>5 Surf Lessons</li>
+          <li>Video Analysis</li>
+          <li>Theory Session</li>
+          <li>Transport to Spots</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn">Choose Plan</a>
+      </div>
+      <div class="package-card">
+        <h3>Private Coaching</h3>
+        <div class="price">$80 / Session</div>
+        <ul>
+          <li>1-on-1 Instruction</li>
+          <li>Customized Progression</li>
+          <li>Flexible Schedule</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline"
+          >Choose Plan</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

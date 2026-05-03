@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Master the Waves</h1>
+    <p>Professional Surf Coaching for All Levels</p>
+    <a href="{{ url_for('contact') }}" class="btn">Book a Lesson</a>
+  </div>
+</section>
+
+<!-- About Teaser -->
+<section class="section">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-img-container">
+        <img
+          src="https://images.unsplash.com/photo-1528150395403-992a693e26c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+          alt="King Putra Surf Instructor"
+          class="about-img"
+        />
+      </div>
+      <div class="about-text">
+        <p>
+          Hi, I'm King Putra, a certified surf instructor with over 10 years of
+          experience. I help beginners stand up on their first wave and
+          intermediates refine their technique...
+        </p>
+        <a href="{{ url_for('about') }}" class="btn btn-outline"
+          >Read My Full Story</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Teaser -->
+<section class="section bg-light">
+  <div class="container text-center">
+    <h2>Popular Packages</h2>
+    <p style="margin-bottom: 30px">
+      Choose the best plan for your surfing journey.
+    </p>
+
+    <div class="packages-grid" style="justify-content: center">
+      <!-- Menampilkan Paket Populer Saja -->
+      <div class="package-card featured">
+        <div class="badge">Popular</div>
+        <h3>5-Day Intensive</h3>
+        <div class="price">$350</div>
+        <ul>
+          <li>5 Surf Lessons</li>
+          <li>Video Analysis</li>
+          <li>Theory Session</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn">Book Now</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px">
+      <a href="{{ url_for('services') }}" class="btn btn-outline"
+        >View All Services & Packages</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Teaser -->
+<section class="section">
+  <div class="container text-center">
+    <h2>What Students Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="reviewer">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Sarah J."
+            loading="lazy"
+          />
+          <span>Sarah J.</span>
+        </div>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i>
+        </div>
+        <p>
+          "The best surf experience I've ever had! I stood up on my first day!"
+        </p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Mike T."
+            loading="lazy"
+          />
+          <span>Mike T.</span>
+        </div>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+          ><i class="fas fa-star"></i>
+        </div>
+        <p>"Highly recommend the 5-day intensive package. Great vibes!"</p>
+      </div>
+    </div>
+    <div style="margin-top: 30px">
+      <a href="{{ url_for('gallery') }}" class="btn btn-outline"
+        >Read More Reviews</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action / Contact Teaser -->
+<section class="section bg-light">
+  <div class="container text-center">
+    <h2>Ready to Surf?</h2>
+    <p>Don't wait for the perfect wave, take the moment and make it perfect.</p>
+    <a
+      href="{{ url_for('contact') }}"
+      class="btn btn-primary"
+      style="margin-top: 20px"
+      >Book Your Lesson Now</a
+    >
+
+    <div style="margin-top: 40px">
+      <h3>Connect With Me</h3>
+      {% include 'components/social_links.html' %}
+    </div>
+  </div>
+</section>
+{% endblock %}
